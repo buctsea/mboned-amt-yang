@@ -92,6 +92,12 @@ module: ietf-amt
           |     |       inet:ip-address
           |     +--rw relay-address?
           |     |       inet:ip-address
+          |     +--rw relay-port?
+          |     |       inet:port-number
+          |     +--ro local-address?
+          |     |       inet:ip-address
+          |     +--ro local-port?
+          |     |       inet:port-number
           |     +--rw upstream-interface?
           |     |       if:interface-ref
           |     +--rw discovery-timeout?                   uint32
@@ -99,12 +105,6 @@ module: ietf-amt
           |     +--rw request-timeout?                     uint32
           |     +--rw request-retrans-count?               uint32
           |     +--rw dest-unreach-retry-count?            uint32
-          |     +--rw relay-port?
-          |     |       inet:port-number
-          |     +--ro local-address?
-          |     |       inet:ip-address
-          |     +--ro local-port?
-          |     |       inet:port-number
           |     +--ro tunnel-state?
           |     |       identityref
           |     +--ro relay-discovery-message-count?
