@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-12T02:45:57.295266+00:00",
+  "timestamp": "2026-03-15T03:20:49.401632+00:00",
   "repo": "changwang-ietf/mboned-amt-yang",
   "labels": [
     {
@@ -49,31 +49,127 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 4,
+      "id": "I_kwDORjzg187yJec3",
+      "title": "Clarify in the narrative text why only one pair of addresses is allowed per address family",
+      "url": "https://github.com/changwang-ietf/mboned-amt-yang/issues/4",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-03-12T06:43:18Z",
+      "updatedAt": "2026-03-13T12:30:28Z",
+      "closedAt": "2026-03-13T12:30:28Z",
+      "comments": [
+        {
+          "author": "changwang-ietf",
+          "authorAssociation": "OWNER",
+          "body": "add reason in yang file",
+          "createdAt": "2026-03-13T11:42:34Z",
+          "updatedAt": "2026-03-13T11:42:34Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "ACK per https://github.com/changwang-ietf/mboned-amt-yang/commit/3c314307b6a4e8dc51ec8b496dbcb252e03100d1",
+          "createdAt": "2026-03-13T12:30:28Z",
+          "updatedAt": "2026-03-13T12:30:28Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "I_kwDORjzg187yJk_e",
+      "title": "Explain why draft-ietf-netconf-udp-client-server can't be reused here.",
+      "url": "https://github.com/changwang-ietf/mboned-amt-yang/issues/5",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Please add an explanation in the narrative text why udp-client grouping defined in draft-ietf-netconf-udp-client-server is not resued here.\n\nI guess the main issue is that grouping allows remote address (gateway here) to be inet:host while you want this to be inet:address. Right? ",
+      "createdAt": "2026-03-12T06:50:10Z",
+      "updatedAt": "2026-03-13T12:29:01Z",
+      "closedAt": "2026-03-13T12:29:01Z",
+      "comments": [
+        {
+          "author": "changwang-ietf",
+          "authorAssociation": "OWNER",
+          "body": "Yes, an explanation has been added in the main text.",
+          "createdAt": "2026-03-13T11:42:08Z",
+          "updatedAt": "2026-03-13T11:42:08Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks.",
+          "createdAt": "2026-03-13T12:29:01Z",
+          "updatedAt": "2026-03-13T12:29:01Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "I_kwDORjzg187yJoKc",
+      "title": "Operational Considerations",
+      "url": "https://github.com/changwang-ietf/mboned-amt-yang/issues/6",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Please add a new Operational Considerations section right before the Security Considerations section that would highlight the point about the need to monitor and detect any address family  mismtaches of various addresses (list them) to detect anomalies and trigger corrective actions as needed.\n\n\n\n\n",
+      "createdAt": "2026-03-12T06:54:13Z",
+      "updatedAt": "2026-03-13T12:29:23Z",
+      "closedAt": "2026-03-13T12:29:22Z",
+      "comments": [
+        {
+          "author": "changwang-ietf",
+          "authorAssociation": "OWNER",
+          "body": "update in new version",
+          "createdAt": "2026-03-13T11:42:57Z",
+          "updatedAt": "2026-03-13T11:42:57Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The text is great. Thanks.",
+          "createdAt": "2026-03-13T12:29:22Z",
+          "updatedAt": "2026-03-13T12:29:22Z"
+        }
+      ]
+    }
+  ],
   "pulls": [
     {
       "number": 1,
       "id": "PR_kwDORjzg187Jv4Me",
       "title": "Some suggestions",
       "url": "https://github.com/changwang-ietf/mboned-amt-yang/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-03-11T15:36:58Z",
-      "updatedAt": "2026-03-11T15:57:15Z",
+      "updatedAt": "2026-03-13T10:43:35Z",
       "baseRepository": "changwang-ietf/mboned-amt-yang",
       "baseRefName": "main",
       "baseRefOid": "cf82715a19130f54891ea0b4f729dd127c5a7693",
       "headRepository": "changwang-ietf/mboned-amt-yang",
       "headRefName": "boucadair-patch-1",
-      "headRefOid": "af9f93432fa647155844bd404f7bae57da7cdc6e",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d0f448559136582473713b9ac87be82f1837e3f7",
+      "closedAt": "2026-03-13T10:43:35Z",
+      "mergedAt": "2026-03-13T10:43:35Z",
+      "mergedBy": "changwang-ietf",
+      "mergeCommit": {
+        "oid": "4bd9742278e9a98d9119be83ee1462e799f1dad6"
+      },
       "comments": [],
       "reviews": []
     },
@@ -82,24 +178,26 @@
       "id": "PR_kwDORjzg187JwP4C",
       "title": "fix normative language + JSON Example is broken",
       "url": "https://github.com/changwang-ietf/mboned-amt-yang/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-03-11T15:56:57Z",
-      "updatedAt": "2026-03-11T15:57:06Z",
+      "updatedAt": "2026-03-13T10:43:18Z",
       "baseRepository": "changwang-ietf/mboned-amt-yang",
       "baseRefName": "main",
-      "baseRefOid": "cf82715a19130f54891ea0b4f729dd127c5a7693",
+      "baseRefOid": "6482492c3bef5b0b5343cabb8acfd9a75bbdc418",
       "headRepository": "changwang-ietf/mboned-amt-yang",
       "headRefName": "boucadair-patch-2",
-      "headRefOid": "75b939ae2fa7e250761a0c4fe67620bb6dcaaf3b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "41c116ba0087b529e660ed44d6538453a5434ec9",
+      "closedAt": "2026-03-13T10:43:18Z",
+      "mergedAt": "2026-03-13T10:43:18Z",
+      "mergedBy": "changwang-ietf",
+      "mergeCommit": {
+        "oid": "8e22707967d07853cc442b5851355b52e44b83b3"
+      },
       "comments": [],
       "reviews": []
     },
@@ -108,20 +206,48 @@
       "id": "PR_kwDORjzg187JwjL9",
       "title": "Redux of narrative text",
       "url": "https://github.com/changwang-ietf/mboned-amt-yang/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-03-11T16:13:39Z",
-      "updatedAt": "2026-03-11T16:13:39Z",
+      "updatedAt": "2026-03-13T10:41:57Z",
       "baseRepository": "changwang-ietf/mboned-amt-yang",
       "baseRefName": "main",
       "baseRefOid": "cf82715a19130f54891ea0b4f729dd127c5a7693",
       "headRepository": "changwang-ietf/mboned-amt-yang",
       "headRefName": "boucadair-patch-3",
-      "headRefOid": "7c090d8fc997f0b6a9407317f6cc8bc4048689f3",
+      "headRefOid": "f063ca5195d097eaff4e2e066c32829837582ed2",
+      "closedAt": "2026-03-13T10:41:57Z",
+      "mergedAt": "2026-03-13T10:41:57Z",
+      "mergedBy": "changwang-ietf",
+      "mergeCommit": {
+        "oid": "6482492c3bef5b0b5343cabb8acfd9a75bbdc418"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDORjzg187KWP0e",
+      "title": "some edits",
+      "url": "https://github.com/changwang-ietf/mboned-amt-yang/pull/7",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "* fix the file name\r\n* offload yang/trees so that you automatically inherit any chnages made to these files\r\n* Some minor edits here and there",
+      "createdAt": "2026-03-13T12:17:44Z",
+      "updatedAt": "2026-03-13T12:24:29Z",
+      "baseRepository": "changwang-ietf/mboned-amt-yang",
+      "baseRefName": "main",
+      "baseRefOid": "c02546b1e5f6827304435cf9202df22c46cda276",
+      "headRepository": "changwang-ietf/mboned-amt-yang",
+      "headRefName": "boucadair-patch-4",
+      "headRefOid": "fd31254c9db24c05bee87da1a87546810a0953b4",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
