@@ -55,7 +55,7 @@
         <email>vinkumar@juniper.net</email>
       </address>
     </author>
-    <date year="2026" month="March" day="13"/>
+    <date year="2026" month="March" day="24"/>
     <area>Ops</area>
     <workgroup>MBONED Working Group</workgroup>
     <keyword>YANG, AMT</keyword>
@@ -87,8 +87,8 @@
     </section>
     <section anchor="terminology-notation-conventions">
       <name>Terminology &amp; Notation Conventions</name>
-      <section anchor="conventions-used-in-this-document">
-        <name>Conventions Used in This Document</name>
+      <section anchor="conventions">
+        <name>Conventions</name>
         <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
    "OPTIONAL" in this document are to be interpreted as described in BCP
@@ -165,7 +165,7 @@ networks.</t>
             <t>Secret Key Timeout: The maximum recommended validity period or
 rotation interval for the private secret (or key) used by a AMT
 Relay to compute Response Message Authentication Code (MAC) values,
-according to Section 5.3.6 of <xref target="RFC7450"/>.</t>
+according to <xref section="5.3.6" sectionFormat="of" target="RFC7450"/>.</t>
           </li>
         </ul>
       </section>
@@ -183,30 +183,104 @@ according to Section 5.3.6 of <xref target="RFC7450"/>.</t>
    Forwarding).</t>
       <figure anchor="fig-cpt">
         <name>AMT Protocol Components</name>
-        <artwork type="ascii-art"><![CDATA[
+        <artset>
+          <artwork type="svg"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="400" width="408" viewBox="0 0 408 400" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+              <path d="M 8,32 L 8,368" fill="none" stroke="black"/>
+              <path d="M 32,80 L 32,352" fill="none" stroke="black"/>
+              <path d="M 56,128 L 56,176" fill="none" stroke="black"/>
+              <path d="M 56,208 L 56,256" fill="none" stroke="black"/>
+              <path d="M 56,288 L 56,336" fill="none" stroke="black"/>
+              <path d="M 104,176 L 104,208" fill="none" stroke="black"/>
+              <path d="M 104,256 L 104,288" fill="none" stroke="black"/>
+              <path d="M 152,128 L 152,176" fill="none" stroke="black"/>
+              <path d="M 152,208 L 152,256" fill="none" stroke="black"/>
+              <path d="M 152,288 L 152,336" fill="none" stroke="black"/>
+              <path d="M 176,80 L 176,352" fill="none" stroke="black"/>
+              <path d="M 232,80 L 232,352" fill="none" stroke="black"/>
+              <path d="M 256,128 L 256,176" fill="none" stroke="black"/>
+              <path d="M 256,208 L 256,256" fill="none" stroke="black"/>
+              <path d="M 256,288 L 256,336" fill="none" stroke="black"/>
+              <path d="M 304,176 L 304,208" fill="none" stroke="black"/>
+              <path d="M 304,256 L 304,288" fill="none" stroke="black"/>
+              <path d="M 352,128 L 352,176" fill="none" stroke="black"/>
+              <path d="M 352,208 L 352,256" fill="none" stroke="black"/>
+              <path d="M 352,288 L 352,336" fill="none" stroke="black"/>
+              <path d="M 376,80 L 376,352" fill="none" stroke="black"/>
+              <path d="M 400,32 L 400,368" fill="none" stroke="black"/>
+              <path d="M 8,32 L 400,32" fill="none" stroke="black"/>
+              <path d="M 8,64 L 400,64" fill="none" stroke="black"/>
+              <path d="M 32,80 L 176,80" fill="none" stroke="black"/>
+              <path d="M 232,80 L 376,80" fill="none" stroke="black"/>
+              <path d="M 184,96 L 224,96" fill="none" stroke="black"/>
+              <path d="M 56,128 L 152,128" fill="none" stroke="black"/>
+              <path d="M 256,128 L 352,128" fill="none" stroke="black"/>
+              <path d="M 160,160 L 248,160" fill="none" stroke="black"/>
+              <path d="M 56,176 L 152,176" fill="none" stroke="black"/>
+              <path d="M 256,176 L 352,176" fill="none" stroke="black"/>
+              <path d="M 56,208 L 152,208" fill="none" stroke="black"/>
+              <path d="M 256,208 L 352,208" fill="none" stroke="black"/>
+              <path d="M 160,240 L 248,240" fill="none" stroke="black"/>
+              <path d="M 56,256 L 152,256" fill="none" stroke="black"/>
+              <path d="M 256,256 L 352,256" fill="none" stroke="black"/>
+              <path d="M 56,288 L 152,288" fill="none" stroke="black"/>
+              <path d="M 256,288 L 352,288" fill="none" stroke="black"/>
+              <path d="M 56,336 L 152,336" fill="none" stroke="black"/>
+              <path d="M 256,336 L 352,336" fill="none" stroke="black"/>
+              <path d="M 32,352 L 176,352" fill="none" stroke="black"/>
+              <path d="M 232,352 L 376,352" fill="none" stroke="black"/>
+              <path d="M 8,368 L 400,368" fill="none" stroke="black"/>
+              <polygon class="arrowhead" points="232,96 220,90.4 220,101.6" fill="black" transform="rotate(0,224,96)"/>
+              <polygon class="arrowhead" points="192,96 180,90.4 180,101.6" fill="black" transform="rotate(180,184,96)"/>
+              <polygon class="arrowhead" points="168,240 156,234.4 156,245.6" fill="black" transform="rotate(180,160,240)"/>
+              <polygon class="arrowhead" points="168,160 156,154.4 156,165.6" fill="black" transform="rotate(180,160,160)"/>
+              <g class="text">
+                <text x="120" y="52">AMT</text>
+                <text x="172" y="52">Protocol</text>
+                <text x="252" y="52">Components</text>
+                <text x="72" y="100">AMT</text>
+                <text x="112" y="100">Relay</text>
+                <text x="272" y="100">AMT</text>
+                <text x="320" y="100">Gateway</text>
+                <text x="104" y="148">Discovery</text>
+                <text x="304" y="148">Discovery</text>
+                <text x="104" y="164">Service</text>
+                <text x="304" y="164">Service</text>
+                <text x="108" y="228">Tunnel</text>
+                <text x="308" y="228">Tunnel</text>
+                <text x="108" y="244">Management</text>
+                <text x="308" y="244">Management</text>
+                <text x="104" y="308">Multicast</text>
+                <text x="304" y="308">Multicast</text>
+                <text x="108" y="324">Forwarding</text>
+                <text x="308" y="324">Forwarding</text>
+              </g>
+            </svg>
+          </artwork>
+          <artwork type="ascii-art"><![CDATA[
          +------------------------------------------------+
          |            AMT Protocol Components             |
          +------------------------------------------------+
-         |  +-----------------+      +-----------------+  |
+         |  .-----------------.      .-----------------.  |
          |  |   AMT Relay     |<---->|   AMT Gateway   |  |
          |  |                 |      |                 |  |
-         |  |  +-----------+  |      |  +-----------+  |  |
+         |  |  .-----------.  |      |  .-----------.  |  |
          |  |  | Discovery |  |      |  | Discovery |  |  |
          |  |  |  Service  |<-+------+--|  Service  |  |  |
-         |  |  +-----------+  |      |  +-----------+  |  |
+         |  |  '-----+-----'  |      |  '-----+-----'  |  |
          |  |        |        |      |        |        |  |
-         |  |  +-----------+  |      |  +-----------+  |  |
+         |  |  .-----+-----.  |      |  .-----+-----.  |  |
          |  |  |   Tunnel  |  |      |  |   Tunnel  |  |  |
          |  |  | Management|<-+------+--| Management|  |  |
-         |  |  +-----------+  |      |  +-----------+  |  |
+         |  |  '-----+-----'  |      |  '-----+-----'  |  |
          |  |        |        |      |        |        |  |
-         |  |  +-----------+  |      |  +-----------+  |  |
+         |  |  .-----+-----.  |      |  +-----+-----+  |  |
          |  |  | Multicast |  |      |  | Multicast |  |  |
          |  |  | Forwarding|  |      |  | Forwarding|  |  |
-         |  |  +-----------+  |      |  +-----------+  |  |
-         |  +-----------------+      +-----------------+  |
+         |  |  '-----------'  |      |  +-----------+  |  |
+         |  '-----------------'      '-----------------'  |
          +------------------------------------------------+
 ]]></artwork>
+        </artset>
       </figure>
       <t>The AMT data model provides methods for managing AMT protocol,
    covering all its core functional components as illustrated in
@@ -214,15 +288,15 @@ according to Section 5.3.6 of <xref target="RFC7450"/>.</t>
       <ul spacing="normal">
         <li>
           <t>Parameters of AMT relay service, such as Relay Discovery Address
-(Section 4.1.5 of <xref target="RFC7450"/>), Relay Address (Section 4.1.5 of
-<xref target="RFC7450"/>), the maximum number of tunnels, and secret key timeout.</t>
+(<xref section="4.1.5" sectionFormat="of" target="RFC7450"/>), Relay Address (<xref section="4.1.5" sectionFormat="of" target="RFC7450"/>),
+the maximum number of tunnels, and secret key timeout.</t>
         </li>
         <li>
           <t>Parameters of AMT gateway service, such as Relay Discovery Address
-(Section 4.1.5 of <xref target="RFC7450"/>), Relay Address (Section 4.1.5 of
-<xref target="RFC7450"/>), Discovery Timeout (Section 5.2.2.4 of <xref target="RFC7450"/>),
-Request Timeout (Section 5.2.2.4 of <xref target="RFC7450"/>) and Maximum
-Retransmission Count (Section 5.2.2.4 of <xref target="RFC7450"/>).</t>
+(<xref section="4.1.5" sectionFormat="of" target="RFC7450"/>), Relay Address (<xref section="4.1.5" sectionFormat="of" target="RFC7450"/>),
+Discovery Timeout (<xref section="5.2.2.4" sectionFormat="of" target="RFC7450"/>),
+Request Timeout (<xref section="5.2.2.4" sectionFormat="of" target="RFC7450"/>), and Maximum
+Retransmission Count (<xref section="5.2.2.4" sectionFormat="of" target="RFC7450"/>).</t>
         </li>
         <li>
           <t>AMT tunnel information, such as endpoint IP address and UDP port
@@ -283,8 +357,8 @@ number, local IP address and UDP port number.</t>
       </section>
       <section anchor="tree-view">
         <name>Tree View</name>
-        <t>The full tree diagram of the "ietf-amt" YANG module is represented in
-   Appendix A. The following subsections list the subtree structures.</t>
+        <t>The full tree diagram of the "ietf-amt" YANG module is provided in
+   <xref target="full-tree"/>. The following subsections list the subtree structures.</t>
         <section anchor="overall-structure">
           <name>Overall Structure</name>
           <t>The overall tree structure of the AMT YANG module is shown in
@@ -325,7 +399,7 @@ module: ietf-amt
         </section>
         <section anchor="relay">
           <name>Relay</name>
-          <t>The structure of 'relay' is shown in <xref target="fig-relay-subtree"/>.</t>
+          <t>The overall structure of 'relay' is shown in <xref target="fig-relay-subtree"/>.</t>
           <figure anchor="fig-relay-subtree">
             <name>AMT Relay Subtree Structure</name>
             <artwork type="ascii-art"><![CDATA[
@@ -349,6 +423,100 @@ module: ietf-amt
        |  |     +--rw discovery-address?     inet:ip-address
        |  |     +--rw domain-name?           inet:domain-name
        |  +--ro tunnels
+       |  |  ...
+       |  +--ro relay-message-statistics
+       |     ...
+       +--rw gateway {amt-gateway}?
+          ...
+]]></artwork>
+          </figure>
+          <t>The 'relay' data nodes are described as follows:</t>
+          <dl>
+            <dt>'addresses':</dt>
+            <dd>
+              <t>Indicates the core address configurations for AMT Relay.</t>
+            </dd>
+            <dt/>
+            <dd>
+              <t>This data node includes 'family', 'anycast-prefix', and 'local-
+   address'. The 'family' indicates the address family (IPv4 or IPv6).
+   The 'anycast-prefix' indicates the address prefix used by the Gateway
+   to discover the Relay. The 'local-address' indicates the local
+   interface address the Relay actually listens on and sends AMT
+   messages on, or the actual communication address after the tunnel is
+   established.</t>
+            </dd>
+            <dt>'tunnel-limit':</dt>
+            <dd>
+              <t>Indicates the maximum number of endpoint Gateways
+   that a Relay can serve simultaneously.</t>
+            </dd>
+            <dt>'secret-key-timeout':</dt>
+            <dd>
+              <t>Indicates the maximum recommended validity
+   period or rotation interval for the private secret (or key) used by a
+   AMT Relay to compute Response MAC values. In addition, the private
+   secret (or key) is known only to the AMT relay, and the provisioning
+   of the private secret (or key) is out of scope.</t>
+            </dd>
+            <dt>'relay-dns-resource-records':</dt>
+            <dd>
+              <t>Indicates the DNS RR configuration for
+   AMT relay discovery. Each DNS RR configuration ('record') includes
+   the specific multicast source IP address to which this DNS RR applies
+   ('source-address'), the priority value of this DNS RR ('precedence'),
+   the discovery optional flag ('d-bit'), the type of AMT relay address
+   ('relay-type'), the directly specified IP address of AMT relay
+   discovery address ('discovery-address'), and the wire-encoded domain
+   name of AMT relay ('domain-name').</t>
+            </dd>
+            <dt>'tunnels' (<xref target="fig-tunnel-subtree"/>):</dt>
+            <dd>
+              <t>Indicates tunnel information from various AMT gateways
+   connected to this AMT relay.</t>
+            </dd>
+            <dt/>
+            <dd>
+              <t>Each tunnel entry ('tunnel') includes
+   the IP address and port number of the tunnel opposite end ('gateway')
+   ('gateway-address' and 'gateway-port'), the local IP address and UDP port number
+   used by the local ('relay') end for this tunnel ('local-address' and 'local-
+   port'), the tunnel status ('state'), the multicast flow information
+   ('multicast-flows') carried by the tunnel, the number of different
+   multicast groups currently carried by this tunnel ('multicast-group-
+   num'), the message counter carried by the tunnel ('request-message-
+   count', 'membership-query-message-count', and 'membership-update-
+   message-count'), and the time on the most recent occasion at which
+   any one or more of the tunnel's counters suffered a discontinuity
+   ('discontinuity-time').</t>
+            </dd>
+            <dt/>
+            <dd>
+              <t>Each multicast flow information ('flow') has
+   multicast source address ('source-address') and multicast group
+   address ('group-address').</t>
+            </dd>
+          </dl>
+          <ul empty="true">
+            <li>
+              <t>Design note: The four data nodes ('gateway-address',
+'gateway-port', 'local-address', and 'local-port) do not reuse
+the standard "udp-client" grouping defined in <xref target="I-D.ietf-netconf-udp-client-server"/>
+because AMT requires the gateway to be a specific IP address (inet:ip-address),
+while the "udp-client" grouping allows the use of domain names (inet:host).
+Reuse could lead to configuration errors or runtime risks, so a custom structure
+must be defined to enforce this constraint.</t>
+            </li>
+          </ul>
+          <figure anchor="fig-tunnel-subtree">
+            <name>AMT Relay Tunnel Subtree Structure</name>
+            <artwork type="ascii-art"><![CDATA[
+module: ietf-amt
+  augment /rt:routing/rt:control-plane-protocols:
+    +--rw amt!
+       +--rw relay {amt-relay}?
+       |  ...
+       |  +--ro tunnels
        |  |  +--ro tunnel* [gateway-address gateway-port]
        |  |     +--ro gateway-address     inet:ip-address
        |  |     +--ro gateway-port        inet:port-number
@@ -370,6 +538,28 @@ module: ietf-amt
        |  |     +--ro membership-update-message-count
        |  |     |              yang:zero-based-counter64
        |  |     +--ro discontinuity-time           yang:date-and-time
+       |  +--ro relay-message-statistics
+       |     ...
+       +--rw gateway {amt-gateway}?
+          ...
+]]></artwork>
+          </figure>
+          <dl>
+            <dt>'relay-message-statistics':</dt>
+            <dd>
+              <t>Indicates various messages and error
+   statistics handled by AMT relay as shown in <xref target="fig-stats-subtree"/>.</t>
+            </dd>
+          </dl>
+          <figure anchor="fig-stats-subtree">
+            <name>AMT Relay Statistics Subtree Structure</name>
+            <artwork type="ascii-art"><![CDATA[
+  augment /rt:routing/rt:control-plane-protocols:
+    +--rw amt!
+       +--rw relay {amt-relay}?
+       |  ...
+       |  +--ro tunnels
+       |  |  ...
        |  +--ro relay-message-statistics
        |     +--ro received
        |     |  +--ro relay-discovery       yang:zero-based-counter64
@@ -404,53 +594,6 @@ module: ietf-amt
           ...
 ]]></artwork>
           </figure>
-          <t>The 'relay' data nodes are described as follows:</t>
-          <t>'addresses': Indicates the core address configurations for AMT Relay.
-   This data node includes 'family', 'anycast-prefix', and 'local-
-   address'. The 'family' indicates the address family (IPv4 or IPv6).
-   The 'anycast-prefix' indicates the address prefix used by the Gateway
-   to discover the Relay. The 'local-address' indicates the local
-   interface address the Relay actually listens on and sends AMT
-   messages on, or the actual communication address after the tunnel is
-   established.</t>
-          <t>'tunnel-limit': Indicates the maximum number of endpoint Gateways
-   that a Relay can serve simultaneously.</t>
-          <t>'secret-key-timeout': Indicates the maximum recommended validity
-   period or rotation interval for the private secret (or key) used by a
-   AMT Relay to compute Response MAC values. In addition, the private
-   secret (or key) is known only to the AMT relay, and the provisioning
-   of the private secret (or key) is out of scope.</t>
-          <t>'relay-dns-resource-records': Indicates the DNS RR configuration for
-   AMT relay discovery. Each DNS RR configuration ('record') includes
-   the specific multicast source IP address to which this DNS RR applies
-   ('source-address'), the priority value of this DNS RR ('precedence'),
-   the discovery optional flag ('d-bit'), the type of AMT relay address
-   ('relay-type'), the directly specified IP address of AMT relay
-   discovery address ('discovery-address'), and the wire-encoded domain
-   name of AMT relay ('domain-name').</t>
-          <t>'tunnels': Indicates tunnel information from various AMT gateways
-   connected to this AMT relay. Each tunnel entry ('tunnel') includes
-   the IP address and port number of the tunnel opposite end ('gateway')
-   ('gateway-address' and 'gateway-port'), the local IP address and UDP port number
-   used by the local ('relay') end for this tunnel ('local-address' and 'local-
-   port'), the tunnel status ('state'), the multicast flow information
-   ('multicast-flows') carried by the tunnel, the number of different
-   multicast groups currently carried by this tunnel ('multicast-group-
-   num'), the message counter carried by the tunnel ('request-message-
-   count', 'membership-query-message-count', and 'membership-update-
-   message-count'), and the time on the most recent occasion at which
-   any one or more of the tunnel's counters suffered a discontinuity
-   ('discontinuity-time'). Each multicast flow information ('flow') has
-   multicast source address ('source-address') and multicast group
-   address ('group-address'). The four data nodes ('gateway-address',
-   'gateway-port', 'local-address', and 'local-port) here do not reuse
-   the standard "udp-client" grouping defined in <xref target="I-D.ietf-netconf-udp-client-server"/>
-   because AMT requires the gateway to be a specific IP address (inet:ip-address),
-   while the standard "udp-client" grouping allows the use of domain names (inet:host).
-   Reuse could lead to configuration errors or runtime risks, so a custom structure
-   must be defined to enforce this constraint.</t>
-          <t>'relay-message-statistics': Indicates various messages and error
-   statistics handled by AMT relay.</t>
         </section>
         <section anchor="gateway">
           <name>Gateway</name>
@@ -503,22 +646,36 @@ module: ietf-amt
 ]]></artwork>
           </figure>
           <t>The 'gateway' data nodes are described as follows:</t>
-          <t>'pseudo-interfaces': Indicates the configuration and operational
+          <dl>
+            <dt>'pseudo-interfaces':</dt>
+            <dd>
+              <t>Indicates the configuration and operational
    state of pseudo interfaces used to establish AMT tunnels between
    gateways and relays.</t>
-          <t>'gateway-message-statistics': Indicates the message statistics of the
+            </dd>
+            <dt>'gateway-message-statistics':</dt>
+            <dd>
+              <t>Indicates the message statistics of the
    AMT gateway. It has the time on the most recent occasion at which
    any one or more of the AMT gateway message counters suffered a discontinuity
    ('discontinuity-time'), the received message statistics of AMT gateway
-   ('received'), and the sent message statistics of AMT gateway ('sent').
-   The 'received' includes the number of AMT relay advertisement
+   ('received'), and the sent message statistics of AMT gateway ('sent').</t>
+            </dd>
+            <dt/>
+            <dd>
+              <t>'received' container includes the number of AMT relay advertisement
    messages received ('relay-advertisement') and the number of AMT
-   membership query messages received ('membership-query'). The 'sent'
-   includes the number of AMT relay discovery messages sent ('relay-
+   membership query messages received ('membership-query').</t>
+            </dd>
+            <dt/>
+            <dd>
+              <t>'sent' container includes the number of AMT relay discovery messages sent ('relay-
    discovery'), the number of AMT membership request messages sent
    ('request'), the number of AMT membership update messages sent
    ('membership-update'), and the number of AMT teardown messages sent
    ('teardown').</t>
+            </dd>
+          </dl>
         </section>
       </section>
       <section anchor="yang-module">
@@ -1340,7 +1497,7 @@ module ietf-amt {
     <section anchor="operational-considerations">
       <name>Operational Considerations</name>
       <t>This document specifies a YANG data model for AMT that configures and monitors
-   address parameters for both Relay and Gateway functions. Operational deployments
+   address parameters for both Relay and Gateway functions. Operators
    MUST monitor for address family mismatches between associated address parameters
    to ensure correct protocol operation, tunnel establishment, and forwarding behavior.</t>
       <t>The following address pairs and combinations are critical and MUST be validated
@@ -1413,34 +1570,29 @@ failure in Relay discovery, tunnel establishment, or traffic decapsulation.</t>
    protection or authentication can have a negative effect on network
    operations. The following subtrees and data nodes have particular
    sensitivities/vulnerabilities:</t>
-      <artwork type="ascii-art"><![CDATA[
-   Under /rt:routing/rt:control-plane-protocols/rt:control-plane-
-   protocol/:
+      <artwork><![CDATA[
+  Under /rt:routing/rt:control-plane-protocols/rt:control-plane-
+  protocol/: Unauthorized access to any data nodes in these subtrees
+  can adversely affect the AMT subsystem of both the local device and
+  the network. This may lead to network malfunctions, delivery of
+  packets to inappropriate destinations, and other problems.
 
-   amt/relay/addresses/address
+     amt/relay/addresses/address:
+     : This subtree specifies the IPv4 or IPv6 address information
+       for an AMT relay. Modifying the configuration may cause the
+       AMT tunnel to be torn down or established.
 
-   This subtree specifies the IPv4 or IPv6 address information for an
-   AMT relay. Modifying the configuration may cause the AMT tunnel
-   to be torn down or established.
+     amt/relay/relay-dns-resource-records/record:
+     : This subtree specifies the DNS RR configuration used to
+       discover AMT relays. Modifying this configuration may cause
+       the AMT gateway to discover new AMT relay devices, or fail to
+       discover AMT relay devices.
 
-   amt/relay/relay-dns-resource-records/record
-
-   This subtree specifies the DNS RR configuration used to discover
-   AMT relays. Modifying this configuration may cause the AMT
-   gateway to discover new AMT relay devices, or fail to discover AMT
-   relay devices.
-
-   amt/gateway/pseudo-interfaces/interface
-
-   This subtree specifies the parameters of AMT pseudo-interface for
-   an AMT gateway. Modifying this configuration may cause the AMT
-   gateway to establish or tear down tunnels with multiple AMT
-   relays.
-
-   Unauthorized access to any data nodes in these subtrees can
-   adversely affect the AMT subsystem of both the local device and
-   the network. This may lead to network malfunctions, delivery of
-   packets to inappropriate destinations, and other problems.
+     amt/gateway/pseudo-interfaces/interface:
+     : This subtree specifies the parameters of AMT pseudo-interface
+       for an AMT gateway. Modifying this configuration may cause the
+       AMT gateway to establish or tear down tunnels with multiple
+       AMT relays.
 ]]></artwork>
       <t>Some of the readable data nodes in this YANG module may be considered
    sensitive or vulnerable in some network environments. It is thus
@@ -1448,17 +1600,11 @@ failure in Relay discovery, tunnel establishment, or traffic decapsulation.</t>
    notification) to these data nodes. Specifically, the following
    subtrees and data nodes have particular sensitivities/
    vulnerabilities:</t>
-      <artwork type="ascii-art"><![CDATA[
+      <artwork><![CDATA[
    Under /rt:routing/rt:control-plane-protocols/rt:control-plane-
-   protocol/:
-
-   amt/relay
-
-   amt/gateway
-
-   Unauthorized access to any data nodes in these subtrees can
-   disclose operational state information about the AMT relay or AMT
-   gateway on this device.
+   protocol/: amt/relay and amt/gateway. Unauthorized access to any
+   data nodes in these subtrees can disclose operational state
+   information about the AMT relay or AMT gateway on this device.
 ]]></artwork>
     </section>
     <section anchor="iana-considerations">
@@ -1810,7 +1956,7 @@ failure in Relay discovery, tunnel establishment, or traffic decapsulation.</t>
         </reference>
       </references>
     </references>
-    <?line 1468?>
+    <?line 1495?>
 
 <section anchor="full-tree">
       <name>Full Tree</name>
@@ -1930,8 +2076,8 @@ module: ietf-amt
       <t>This section presents a simple and illustrative example of how to
    configure AMT.</t>
       <t>The example is represented in both XML <xref target="W3C.REC-xml-20081126"/> and
-   JSON <xref target="RFC7951"/> format.</t>
-      <t><xref target="fig-example-xml"/> shows an example configuration for an AMT relay service in
+   JSON <xref target="RFC7951"/> formats.</t>
+      <t><xref target="fig-example-xml"/> shows a sample configuration for an AMT relay service in
    XML format. This example configures the protocol address family
    (IPv4 or IPv6), secret key timeout (120 minutes), and tunnel limit
    (10) for AMT relay function. In addition, the AMT anycast prefix is
@@ -1940,7 +2086,7 @@ module: ietf-amt
    2001:db8:abcd:12::42 for IPv6.</t>
       <figure anchor="fig-example-xml">
         <name>Data Model Example in XML</name>
-        <artwork type="ascii-art"><![CDATA[
+        <sourcecode type="xml"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <routing xmlns="urn:ietf:params:xml:ns:yang:ietf-routing">
@@ -1966,13 +2112,13 @@ module: ietf-amt
     </control-plane-protocols>
   </routing>
 </config>
-]]></artwork>
+]]></sourcecode>
       </figure>
-      <t><xref target="fig-example-json"/> shows the same example configuration for an AMT relay
+      <t><xref target="fig-example-json"/> shows the same sample configuration for an AMT relay
    service in JSON format.</t>
       <figure anchor="fig-example-json">
         <name>Data Model Example in JSON</name>
-        <artwork type="ascii-art"><![CDATA[
+        <sourcecode type="json"><![CDATA[
 {
   "ietf-routing:routing": {
     "control-plane-protocols": {
@@ -1999,311 +2145,314 @@ module: ietf-amt
     }
   }
 }
-]]></artwork>
+]]></sourcecode>
       </figure>
     </section>
   </back>
   <!-- ##markdown-source:
-H4sIAAAAAAAAA919bXfbNtLod/8KPMo513ZryS9x3URNk7pO2vU+cZK1k+12
-9+wHSoJsbihSS1J23MT379w/cb89f+zOCwACIChRsp1kL/dsI5PAYDAYDGYG
-g0G3210bZqM4Pe+LWTnuPlpbK+MykX1xKH4/fPWreB6VkTjJRjIR4ywXh7My
-m0RlPBQnswT+iYpSvJ2lqUwAhNg4PHm7uRYNBrm87Ifrn7xdG2XDNJpAE6M8
-GpfdWEK7k0GWylE3mpTd6yg97+4crA2jUp5n+XVfFOVoba0oo3QUJVCsL65l
-sVbMBpO4KOIsLa+n8O74xdtfxNo07ot/lNlwSxRZXuZyXMCv6wn/GGaTiUzL
-4p9ra/E074synxXl3s7O4529tSiXUV+8nhZrV0CKk59fv3rxXPyW5e+xX7/m
-2Wwq1t5fcae2qBtr0ay8yPL+mhBd+L8QcVrA9554Gc/o7/EsSbijv8dFBmD0
-hyw/j9L4DyBjlvbF0UWcIokGcSLp8zCbpSX2m77QKzmJ4qQvknh2TaB+GuKn
-CdXpQbdcHI4Qh9TD4egC6HoVERppAI1X8kr86eGReCuHF2mWZOcxEHkROulQ
-Q+3t7O/v7v908XBYx+fvPfF3LOdh9PcLmZ5vnMGwXm9aBVy0/v72hTjK8mmW
-04sFGP2BUHp/IOCf/iiJNL1h6mLzt574VdaQ+dtM0hiZTy4af5pFVzJehjji
-HCB9YKg/XVD1OmX+2hP/PZtEuXgVnUd59C8Pqb/GaTYKlHBx+/MsjacSSsjy
-Chi2cLC4jNP3WP+nf3GpXirLtbU0y3EWX0rk3tNfjvZ2dx+rnw8PHj1SPw92
-9nbUz+/3vzM/H5ufj3a/39c/9x6bnw/3d6ufD6ufuolH33//vfr5+PEulRWi
-mk1AIcH9//P//N8cyCjOhhfZVZSMZE6fhcgzFFFyFJcZv1JC6whmeJZakuct
-yAYmyAjESV88l0M5GQCx9nb2vqP3IBqGIENALvQRIYEYbYnnr4/F7k4P+vfo
-+22FJzcUAUZQ9KIsp0V/e/vq6qqXj4ddxqUHI7Mdp+NsG95RHfzDpfX+3nd7
-msB7hlJAVUO0nf2dimjm5/7+gSbazg69/e3hUe/0xVH3wyTpghh7tLu7d9BM
-zLfxRPycR9cuhWWUijdRlsTO65MYJjaI7DPgGKDWefdk+JeZlKlT6MWlFCdR
-ogZFv/0lj9L/+T9ZXIjfoaKMZvb4vPgAhC7iQYI18/cgVF/ChJ1F51Js/O3k
-5abY7e2IjV/icXkhXgBFgb83rdF7lV3q0dt5VBs9kNbJSPwWj6T4TQ6AF1Jc
-A+LZRJxKFv0jmjHCp1njwF49pAF9e7qNRbcD9Y67z3u0gMG0mmSjLgz7o/2d
-7wdx0fe+Aprj7mw07Q6TGNDtFjK/lDBE3W5XRIOizKMhTExA5O0F0A7WyBmu
-VWIkx3EqCxExU4+QqSdmOS0vpJhEKdCPCmdjBNBijRbTPINVMktEBiNMVCl6
-a4TLJB6NYCFaeyCOQbJlo9mQ5C4C/vhRSYKbGxBf/BFQQyQMPMKXBg6woU8G
-HQTRjBF2B7oF8yTHlxNTECgzHkNnxjlJT1jYZzk2G6dAFFOsK9MI2GokUpaC
-osyAOYYS4SGKUSmSaPgeAVSgYUxSCf27jMtrrIDoMngNpodLvZgV0N6752+w
-tkyH0bSYJcxKsHgJEKwELZfTBH7RewAGJLlEXixxPMezlOgYJdBUr6ImikKg
-5myKDF44FB5c40DH42skB2KWyyS6FqO4GMI0yK+xAaADjBsAO6445fmrM2B4
-7LYUx28I/+emzsbz0+PD55tiInHljouJ0coAyDngcBVdF4i9bobqU8uKiqAo
-CaAAEhtHGKpfRTkqkC5p7VGDcXqfZleppi1gFY1GOeG+LMcTtyNFEC/NdQwG
-pfeLUa8v3iQyKiSNRwTNRQmw+XA4y3MYOwAMWK//DZ51cRWDnAHSYm2YfrMo
-ISDpjITMBg5uLidABh7ENCvlJnBEUmRbYsqN8MghAB6iyxhVUpJXSEZg/OEF
-z5DZwHAHfu3hFHsr80lMCsW1+F8g3kr+DqLrEkiBsxJKPbD/Fu8KYHLgfSLa
-c0U0RUYp3strAXw7KkTn5N3Z284W/ytevabfpy/+8u749MVz/H32p8OXL80P
-LoFg4O/X716qIvirqnz0+uTkxavnXB/eCu/VyeHv8A+QjeC8fvP2+PWrw5cd
-RLd0xhiZCKgzkChHZD7NZQm9iqCELIZ5POAu/nxEM253n+cFKikwL3jewMoM
-v69A06MGRZYm1+pPoPa1iKZTCVoTCokkQSjAs3EZJWAGQDPFBbLjhcxpGJxx
-MKQsrbFh4USoIe95jAmyCGY4aIKENeGHqtPNDfEVvOVp/Rin9RYUGSYzsrio
-qW9wtT43g/iNsAA7b0AVlPoFyBVgh/Ja/w2lZ4k0qI+zJMmu9CzBjhRE8pni
-HWcwDBq/8vRH068SV4IbUnN/WBZIPtAZYDGdZjB4SBqllFFbJNVhjqVqPrAE
-XsfmQCNNeyCpCpi3Maik16TGIe3KTIFwpM4pSZ0tIcH0g7lTXDgtsLiebOk2
-FIS6BCJ4UBQmq6rLHAOvUi2+qHsKgq6XktKGXAVSAogWA+JJNgSSqK5ouhGe
-Yaph+VLTXK8thhiqQeCt0EI2jfJSr6HHOEtgSQqST+OdgUFWlNwpoMq/wfaA
-wiSAkXBqeIsts1DJqlWv71SJCWBRFKzgEpmKsVdkrNZDua2gVETFsVUgywuo
-fn5RjSZ00RtPhbNaS4ThyMKQmpUGpDUsuqM4l4reW7g6dwcR8re7QDN4Bc9u
-ewALPGi0yMsWdcQGkpsrgXyIRpvUSS6koNB4OwVLsLU2cWyQmWmSIXeCIlyA
-3VrWqDwFRUTqoUEwDFEpIBoT4lulhqi1d5ThGqSgFLMpQVfDBIuqacfQ600h
-Z6OsS+wzhrUQKYfWK3JxrF9qBidlzSKFmdgKPcQAWAfWbXSiUHEjBYBPFSGZ
-JL1K0zMmGzOPXrMLRgBEil6G48LCCaRMPIY5J65ASItIU+7iuvCQ5+mPkGv8
-qliv5wk4cQaqd4zEIFlZTVowEqZZiuuTRQ2Nr8IgyocXcQl8N4O1g0Zc9QIn
-9VUKeryMJtwjFhb+4FdKKemOU7tGJfUY9ASUjIkmtqqPSCawXIqCe+Gqlkbp
-tjC3lhxNRtYcXT27mA1wgZvStNHiw5K+pIYqAarFtTRTDcUCrFIsEyqlcM5o
-MFc5YzGEvuarDkQ1uZm0bBcVRsCoCV9bJ7Q9gXWwnXMjJ0kSa+17iDpYXiil
-35V0WAYI36D9Vq+r2Zxpq0EB0l8Mdc7kEJQi8d+gyoDhLmHyMIkm0Yd4AiZt
-rk1aEDaXMPQjHHyw5eJsVE3cXCuUxKRQzBiNsIRcRsRE1MwGvAbVcZOFF1ge
-UU3eAco4LLMSxRXItRTW0xNgIrTdwcS7wBVvqNVXMHs2Tg6PNhE14CPNL9Fw
-mDG1ANoZC2/xXe9h7wDJZxk/SivLpQTbJTrPo0nByg2+Gak3YXVGKT/Uy1T3
-n20KLFxZXg/3VUO2j/r1JfKjvDKqlM15Apc9UAh4OiFrXWUVr4LASpIZGvKl
-1dI4Pu8OpyW0xEqlWwOVMiYvcp+WT6Q8xBI5MBpeIBxtqMQ5DyVKK9b5CjDp
-tHW3pdZHcWJcAjwfHVn8i+HZTej9/4YHhO0wjrugb6hxgufb7pLPt1XdT8J6
-kIBvNAGPqq7bz6c7a7de/dsmuN867X5itI0E5pdPsOBT/UGPD5eu1XWfTwFa
-mNJ+3W89vIL9+TZc95Nl3n+y69Y/BOpqAUydVa3BP86Hu8fZo41PK/vHHdNK
-65DCp5X/IVC3mlYerawP/z/RqnLWebTyPwTqVlLGq+t/uDucV577K8gcFJtr
-H/vigZLv7OD+sdMg7To3zoJi+bSUl7AQE1leZKOi2clFiyhNZ/yCTi20SGFB
-DeuwZKjXV6Rf4nNQmMSu0l15ITMugDcRLKygXObkJTOuP61rboGSOLxAwCwj
-K/lyyP48RdMNvbbv93Z733lr++aWqq3q1EsrKG6d0lJ+lIMOdV3bolfKDPrA
-StaZes0dU2re19C1qi2l6lX1vuvtwf/2a+0Y1YzU9Nb1WBtgKhoQZKiqvXTg
-2Vm6GI6ha2XxCbPTlaUVMY2BWPl8CQcw1wVar1r9pQHdUiZTQ1lVyrTNjm7l
-U8YtnnwkNk5PLSU2rbMwKXz4lnx4J8pvBsrmmxx0xA+yUL55sCW6U/Xq5gb6
-M5lEefyH2e7gL2EVFNr4pOCRZKKmWF2rxNWpHEtySONfa58q4fIpJHHcl1Ae
-GgVWZ1C0xYR/dzEUouCXNFy4BQnYY/lcf1XllT1uXrJSvPd435Q3qNrlzUut
-RD9W5TFswy5PYRxz8AHrXrj4K4u+cOE/pPIoau0h0fJWjxoxylGW52SajIyT
-lgeY5K82KP5qq/e41w7WWmVVaAO6Q0hFk7LjDB+MsnGBGJl6OJ0Cn8NgH/Y8
-9yva1DyTCnLOsRdwNqAWQTDPyHwtyNx5QMYHyvUz/cGgmakvbj3b2PeQZAe3
-bYQoEF0EQXaPtR7ZlZUzulBGL7SiR94uxeRBGOprRxRTOYzHsayc4MwdPdxF
-xi8wtZPrrRDG5CfX7Xa287KvoOJP3N/Ns6Q7TaJUdo37qFM3XhhYX+ihWzNQ
-RTuYvGEO6kB+JaD+f2kVgd+wHPmIMUr08+bZmmFh0ev13NJ6faHy6o+qhuAa
-jhphj5Dmb80SSDDiXsMblkqxDk2so4OiBPsU1kXLJVsIXdt1E/FymV9igULv
-Xmm/MnphroVx7ys9Ix2j6lBtexYl7mJVCLB6onGAX0WM/mfkUTB6gypK39rX
-VC55hKKoBYyjXJwAgwsBMpqu5C0cxexfB2E/kvoPYqyxjPTU0lQiEDadjIdI
-cSSv3RpTvYfhOPDUalOAykYalFHflIvIo5HZXYduE730dknV3EjislRo9yo5
-B+uepC2zypboO1HOGe0fZ1+x8iixLoR+1agwDmray2K8aFyLHm0gumMW0zBz
-2AXOVaEEHW+uxSxsGN+Ab3LdTIx1TX3A+nrK8x6pqT2WimjAqKNzFi+kl+Wk
-FxNKKF3NUNtjqF7NG0VtpXvjiCCsrQzlhW07klg7OJhOk85YhvayEEy1neVs
-fTQOvOVQ5dFHIKwoGV8yj+aSQ4lwgqPJQ2lIHR5MyRu3cUFw/JE8ArMjmwAi
-sECDagk0efHvWTwlWbxx9ObFplryiC5meJ2VTc9XazVTSxl96KpllNayr2gh
-UJVYf5WF9cX/+I34xziaxMn1P91Cph3+KuxHb/yC2tNQKUqvaRtxqvVPQapi
-P56qVw31iKO6Wu926kWOBVT1g/m3m8STuHxmYzkDCfNwr1ae7bMu2GddZZ89
-m1uex3mUFkBmFrzdnNT8IFX5ExBVFVVYNxHXLVURuLHPduUpzrwRau/z+23X
-GXUHHpnoGWRZIqO0oRKTANVop6YEU0haEbGB1rRNqXvybInu8QZvFwP67Gap
-svXNG7BMC7T66OhPMDpKrBjC679xoQ+PVSb8Om17kjnQnW7giy4blA1VAxOi
-ZaNc026ydaO8rrjPojmfWcEDYzA86miZUcDPtRkSKm7+i885hr83zycH/+Ug
-Aykr3FvVVcNqY9RQsnq06dt3mpsPwycsl4ax00DRvu2fw7IiG2a8iWfoTnib
-rEvB4ouwJbh/yDzjcAauJPOD/SYUKSK2uIC+QWsw3z9Xaxz5dr/NkRQD5k9n
-wP+0aPjACAdQkehjTSCx+NQo4uQCmyQe2sNtjRYpUyP3mweqir5s3yEXCjvs
-lieLDaU2CitBKSWolKhYrYKLmu7SGfM6vaIREAuIzvHJt+gn8fYKGMo8z/IG
-8HGqgym6HJKzEhnjlPbfu5NoeIshnaXyw1QOwX4lWbUiFI2Lx6wBKSesuRZ+
-VqZDNWhaAH6h5pWE+jytG1byaa+kz2drP0D/L4iCu0rcLwZp1o0wml9q23XF
-fjAjxaCw5l2MAYR/hhdy+L4wmyb3g7/2d9BaNurihk4QJGkdYXHXuGA2L5ar
-uisdK9ze/1SBXepD0GGpTHsT18yRMFXwd1QoJ7ramlw39vR6Xxwrt5/lotZa
-uuO3KYx/hjDqceu4T6ObrSJ51tnWXt+CphwDep0dMOus05OjmttaV65PVdE4
-IxkrjZAy4TeO31zuo18E/j3Y7FWOW7etBiDKlNfbWlaQKHlurcMaJphUIefY
-MD54+ogQrKhL1WIVlMrHIqALHFtMkd3sPE5HhfZD6tktcOtPRZip8xQYpUaO
-Sfak6W29camw1W7NwnGNyRH7/NZtF0Nt6OvbwWa7UXtG2bWNoeuqP8OI/ZDo
-w0XtPkplNisSdSZnve6iaGw1FIGHMEwQ3m3C71wfcTD27vBIRdf1AEGkbMxb
-rxZ88lh7TQD/82Ec8gSqmGOzTWpC49kfilvCKmxU7TU1YQ5gUV5BKWDFqVTk
-bPbg1MhKu7mnnufV8pZ7p5964kU0vAjX2ljnRtY3zQTXWxxqk2pYi/+0N52B
-KFcX8VDFJKsmouk0Uad+N9ZdU3V901A9y3F3hcaFKVYB2FivvEbrvINP/nRj
-UWRT5VweJ9E5FCeHkYZNSqETk2GpNRvrlZ9IV+DoeBjial/O6qINifzABgtd
-Atr31UcErdnjCsB3oSsZsn91nAHdQi6aAKfyGK1vOvPa44JaHAHHz15GQNdZ
-4QTnqo2LlDRm5uK4qFpV3KEg8n7Whmo0wBVewIEVbKDZXkHKptOsiEsKfAeA
-2kW+yYPguanWeeWwXVB6cNrEOSBMW+RzHTXU0AnJ+wLqlAXjt+FLfG/tsnFQ
-VdAonuFwk+tJf6ymB7qM7DHhrnoeJ0BnGOV5XGHL0BlYRcpRPKaoh9LdjSHn
-CqzedEQPedYBZnfPd8gQz80mBm0VkKw0rTBSREPXM8PsBHVQAZjvUdEKQV3H
-tVZCVdSaL6SK6R3FTO1A4X7MEHpDS2PJQodUjBS3WCSuIZOs2udX/Fvo7hWi
-mBE9QWFyNT8epLoyCPOPZ0bz+EI9fAUjesE7wzVJWUkIXwxy3L07rJbKhFPE
-drohNhwvMcttXbA+k0haujNpy9duHEUNi2zSAT91aAboPSvMOU1OJpKPRKc6
-kd1hfOkkgwkXFx8/Lj7EzQf9BnIYQRNKCP17BgKSVzatWvOBx6hag6z5v+F5
-lnl9AIZIZBuEI9KVqSSigDONhC7JYw39AtiOdc9TpAVyUTISCRg4rGDYSyi5
-TWgnLwdWQ97N4+I9JlPJoAdD2t2rtuuYTWDEB9LQDkBK5KqhOjyLAQFlDjiV
-jm5Q9805a4KW/UbDpCNn2qdTVQJmTUcJz/RqFeA9Rq0rh3cZzTZnfZ9R89tX
-utO4fMiJ2rziQ2FVwJVV4pMuZL5+I/5hfv/TLWkg0qoffOJx39TuWhsYHgDb
-W4JhsBaA+uaHV7fB1/WscbcmWN/ZJdNtL1EfBY6/ude05yNcm90RY0sjYG83
-rYTAlTmEVrGEBrT08Ln7uv6OaGO1nINQedl8tqCaXrz9tlpW89tahCTWmaU5
-HsWhute65pxqer+zG9jPW8TRta2G8BaLsNxHoWeh8ynYqOOv/1wNz9klu+vG
-2u2W3WOr83bNmhts36y77d2882WXnrPL1uw2tAH4W2emL7fYCvJg1LaCWgKo
-71PVcHf39VrCFR77LjlMNoT6bt6yEOo7ec0QHB+up+HYXlxzWHqeH9coT+09
-uTXtI+DRnRNGqdU+Ut4YlrBCx/Xh+3DOCOsIsMl1w0leEhNmuN48d+quQGVu
-WnpoZkLrLHcFBRheRMWdWYL2ARbP5l3FKNyyk3WMGrpltal9TlzeNnMpxnBh
-fTQdJdrHlSfcALNO1zquA9vxZQkSx/1seqAdYk5RZZ/WwDIIPQcFi5cQTF8G
-afuVO8Oe9AW4V3LGNEAk0wg7vjg9MC4gC1UtexxYenDo00IQSuIEINTEkj3O
-LjwjfwJg9Ld1Dvl0z90IP/lTPEF1tTCHmx1L3Bwg2bJPq5ClbJ0W2apS7qgD
-CMpqQ5m4po9IKHtNfFxjYdnVh/s7u73dzg9r7Mosprgr0pnlaR9r9Kd4jKzo
-f5gk/bTok5A150SwjtqpgT9/wM5xb2rncz6SGFdl8f0P9CLXJ4KUlO/odIRN
-eQ23zBn6fWr9xm/TOoPjtInvb93mw3Cb7rkip1kdhzWnaUoj2dC02T05VQdS
-DkEpDyNhrQguscfz2sZklQ15b00GFeus79z++z2f3+7jpnZ1V6tWayqA2Hh1
-8vxQ/JX5d7PCys4SSrU6lCO3Orz7czR8j3l3xXM5TbJrDs7m1Lebbu7bDrEz
-hZcPGYPOb79ilsU+/HyiUyaiEoB5DN/LnDxmlDzx6nybk/tuP2XUoeJLWBWg
-psqy+wRTlZZZn4v9pGs+XePyLyizJjbkpdG1Hg2iMUHuUx9WPR1uEFxTgtsa
-vIZktgGg4Ry1NYC1hLQBUOEUszVQTWlkAxBD6WKf8uizTjetuIkkt5KnWuFb
-mLYP5y83vkyayp7iBTfF3TqmtkNHsE5xh791ijv8TZntzA8GoYpxarvqV1Xd
-ZLTDP70kd+vq4O36yeHv2uGs09ytt09zx0D8XHeY6G4DBQImutvkn5jnbjOY
-5o5h1HPdzUl0RzWOsul1Hp9fwFQfbmIa3ANOnf0Wk2FXu78gTTCCgp0VtHuo
-0ebcslrTFbgDiDkRE0FQUWEir/hIN3gqQaEpoaOzKmNmgRQx+wnwZgCzNac8
-exNAnNKd6LA9/AO3likZpgok2EJv7RQPNZVI0eksL2ZRiodj1Enw2eBfUkkq
-vcedxKBmF1Klw9NHZZD4Wyre4TJG6+Hns+cgE6gs1y8kHYMDlADn6kD30CRn
-M+RbL8RLeR4lmAKAN88LTQOVIwlwoeI6caP6vqFFKKUkl7ISnwrrLu7QbGqS
-ErVVqkkaCIKJHT8+fHXIqSYpyZlWozDqYSA5R6EaRT6LSnPVOhyfy3McrOtq
-78ZCDlPixjCRCbGoKOLzlPqwTXrG1EDZrKYrDJNWrPR2uHdSVae5Q27HrJw/
-AL1lle8KX8dlIRNKNcrndROicZqVeNiqx9LJZN5Eju7uPOzu7qgl2JdbuA5i
-hloAodbMzpzFGVFaIhl+fXX2RFq1PKtjVcJy1s/DWNudRXUmMnTajRPMzusR
-pfKeL30txbK329sL46z2JpbG2D1leQ/4WoopqptgQsw7Z6B6QPEVsOYBjI+q
-dXplnR243G8E8kNTlYMFVW6ayEdTh8FVKfciPZm6qZxRpjQ765+Sp5oFdYpd
-tcWK27tmI1l+oOAsA1qFKU1MiItaW+wtSg5l61la70jnBrV83eRvauaKn/Gr
-qajj86xQBJ7QfguzqQJJ0Gvt/dBMRWk3gC6YASZ9LGZDTICH0uTaiToLtO0k
-wLsLLGJEAoEtaDhWUmqlNrWI88kbasg4HG7VQz9vivYCVUS3rBdcq4AOV1FM
-y6K27A4dH7GCEEK5ShV6G4Qd74mL6FYNt7+gy0fjPwc1fy9z6RmBSpzOBqT9
-mSbCszopWIsEM7vB+l+80sN2ODFIUAlx39/aqh9ciyGY0lbiVZFCVYVUTG6Y
-nHxgKmMpcrCNdogMg2u6zaXIQIOJS3uUggRqHKlfYqWSOn1FnDEElYIfUi/J
-uR4cnx5ssPAGc5xeZskle6rmQqmSE1uDcAnWEmVAV5nRVZpKnTT+zpaz73ra
-G1UjLgdVUpr3bjy9D/pi3GLekEh+Lm0pXb5XO8kyvO7ByyyvaysycgJf5Rvn
-IBdQqa108fMIS7eK1LLft7ivSPiP6WVFeR3U0TY5SfN8RzIqaOaqACK/8vTE
-Kcb6DCUbz7rH1cl+7bQMg4cGKleRqFTySsLaafM7Wm+pwNtaHT7xuKuVvo7R
-+ky9MAqAhJtvywkxNpmYLChW93Sgv4VDUyu1dmoiURZ2K4Jz8LiKn37QrdBh
-Hcep0tw4NE+xdBxeqrpQ+ES3k1D5rKYxsaxsFalojhUAWj3xLh05wRv00B0+
-1gUeZMUW0qKg8mwMZJLVfUj6ugsM3fFOKzh5VTQmPR/AYQoyMi74hoOYksKr
-israiwaMol+xvr8X04YJzGo6y4G7hbzqDaRfFzRWMCXQueB98P8OHq/gwH+1
-D1etjDSAPgCtm+YqCz3H4um7PiqZJAu/Zi0GN5fNJyL0EusDsblZ6fD2Bto4
-zgELTi9vUp/UiYVT4TKOVFIPjxomCT7J67hc2BF1DIGyT6OSQtmtQIcCSRNo
-XSfGprtlvCmVyGisue2jV5GMHitIplZALXMgfRVmXYb0g1fuxvu7eR475mrg
-+I4WnsQofl9u6j3zcnCEe+gk5fBxn4vrYapbQD5UjdTErOHv+gKnu8enHHTO
-enQrGnVoTm2zyVdiLGhuzla5T/3N8dg6LYXL+uX+Fma0MWIKRQgdlArTJAji
-IAjiQIFohdfKgux2oswSZos5yk1GMZehPJeEfuZzVECw1TmqHoaoHsNH2UA5
-VfGSEPQEg9Kl4czhKPsmI/e5DRc1ECIIo4mNfNNqHmZfNR9Vv6tfxFn2CTuH
-sdgjRjGONthGVQyXqDIr0TNbO4/nLAAeAvUjd7dHQ8Ex5+6ysZUcNoyLpwIH
-D62100nf6tNsbm7SApOTFpu1aRXQULm5kILq+hDbK6oqBSMF0ONhtOBKxsMR
-8o56w3EbUYPUCQsby5GJpyrzFmKxOlEXRrTON63ws8C6R/l4YLZovazPQ753
-h02cRFnw+kxgKwnyEmZ5rk51Gi1cXMTnIAnmQeLscnxEl3YTK5mtORd30QKK
-gEiqJgl/q+tm9zJQryzlZIqNkSLqj1TdQrcIvIytXm+5evy94uoahHm1qo2C
-PeVZqZ4Ag9EZzDBvqcRddeYaR7jqjaNEe13sj/NUUBYMz6lJPI0iS75HaCa3
-nINEJ4e/17uIc0Ybm75n05wFZaOvXlmvzXLkuYH05isNc7jRVi646gmuxqF+
-EwG9jr87q5kZ5kYdN91zFPIkh6dsVJ1LH/B663YrNN9c+hJZo9J3U9ko/gdM
-h73F06E6ZhyeE1ZeuoDZhl8Fyo260YcPC6GdgL42d97gQ1KbBx4WuYTUJ2qo
-PhR1u1AhRht8Tctehd/uneBnvEWR2O9mw1KWpLOGh6qRreb15aBFX2or4237
-sntQdebgrjpjnR+f05eHd90X+4R7uCvWGcs23bmFP0Kf/mdUrUux+MXpaStB
-+1eeYE4aEJBaaWY7Z/XuUL06OQkomCt8zxVpSKw+tkenELtk7+xV+g4h5W0+
-xwGr0+yNqTgqT61uT5GHPkXIXK0Gd5XW/zOXgIctNCL/oOX9mAgNuSrqiSpa
-jfNv6NoqTeYhTpShBEeMLAhcvbdFHBxQjqp0QdWGrMWt9kzMxvX6tbnagshz
-RF5FXqvU0vQN5O8wyTuWn0cL6PtwSwVGmntsaxDakLbJzy1akTbkAamMfn1E
-yKY2e2Xqmnyj5W8HW0i+T8W5FYX9ZHqNcbuhK1TbR1scsbFlsu2rszTVjbvq
-0Sn+dR9C15zaiVOsmulIG7ZhT4TqTcATMS+Pb3u/hHaNRE6ulqBjwm/wM4gd
-ZVHoU1yL562TbrgZQetI9tIYelliVkLznr3Jb0MZbua7veageY+0ZCQDFF0W
-Uz6RuOpOVkPYUlOLLTpmTkhaN/LO7YV1nYKb2aeGc5NQbIXXnLQzllKrEF6r
-y/kjrZ7bdzHQqmICp5oVJe4Ph96pCxVwwVH3UjecE3WfSlaS6KwyUJmrKmp6
-H4lR6m199AMuXTe1dcCqmG/SGIFKETQXEW7Ayrw6hBl5QxCyW9q4gYkYxN7N
-kbUrG2T1jGwhzAPsgc9xSW4iFfUwL8whCuh6+Dgj0M5OZeFv12umWIts5CtT
-jqB8McK5w7+8SRwQrKEE7EExa6djX0osvTJC389H1kLuB3NXzEEwdCJ/RWwD
-ft7qsHJAv06tFGItejY/Ucbn66J1VPkvs9q56TvtZyg1xxfp6DvvTPbdjWog
-00dzB520H0sv9a3THGAsS71ntaQHKr1jcw68Ogwv/0FI8B2P0f1Ft1XaZXGj
-9CK6lIgtJiUE+ytOh9axJIeyfKFUV8XrqxO3thppJUNMG5wM5F8w3keTJ+JK
-G9aWaXkVFdRmiB0UBnKk0/BadWrHDaqnvZ3clLXtdoazvkjezRhhb+i4GNv4
-qPQMLh/PNzkXpbkIqv3WBkjlhPps4qEpfUTIF8L9a798fREh569dt+pIPYXO
-VyC3b9Ujk1Ljs3XkbS2JRxt0b4KzknKatJ6RZ/OTxiyaje5W72eekcF9ZlZO
-VtCyvha9avkRp5yc7Yf8BRVfZczrl7Z8FprV8wHRIfVEpufwD6dLrU/4AlOP
-YVwF7yuNZzkG9Ylhgqen9WF2lYg1zQIrOukfLRjJvoTmS9KDYh4JlXpf9CJ/
-OEM9qNS9P0LNZ+Pk8GizRT/9a3K+cF9nKeXSr/fVRIYgPiYD+xID2ZDV9GtW
-OAxVjPOBmB04Pw0rzjrqFeOFVTx7g+9gHsc3Xjf0RYSpn5LrfsiFjbLz+lYE
-cy9I+iL0mrXVmT4/uRbe6PRVT0YOSIOVB5Of80F3dLa3FEJtbpP62ufX3VPA
-u8zqK58wt+l//Sqtr7uvtP1jbjun67czGCDsufwQB3eDlIPEZOfHSmS3WJk9
-lxCrwevCvnKqeSobbhxozNtvdtvXlS1wza/cQ5OtlcOzsD26bkjduRDQm3Fg
-iIPjehBokzXTzkXaykE6x/S5tXN0oWvUzwjrA2hKEFt3kN7ePXoHztE7cI2u
-6Bitu0JvxPa2c5a7soDrgtI/O69KWE20Oj1vn/ude3a+llq53Xmlems+oEBg
-UHVnXCA2CAPJ2scAHabqCH2r1vUC1Rwa591ZsJTIccNudUBcVMs03Xavxb7T
-YtXwkDn5PJoQaBOKYXJ1uAlmaqlAWvmRlzBWbxNZVB1jazjrvDTSnwnV2wVC
-VVeMfL6gstWCtW5DzltFFoXjzZyV8TNEnN1BF4JDsWw/6je63Lus1E1aK0OJ
-tyPQPXxz43aXkqWhI8KmOysc99R50kilwIsfo7hU1kSur9qsMkBVT9SU72yp
-3jh30dxZn05q96L6uKp2J3FhJSl1ms740Lk+EYdJU0GhpgxFi9NL0JUKyMTq
-EB25x5cIp/kCgxwmgb9L2b4Ln29kGcGlRzQawDDR7a46iYcaN1CGczsVXPX4
-ay0dd15hmJuuVLozMpF+UyMVjj5Gmhtdmo46BdiXDzcjxehQrQmD07SGfp8Y
-c7te390GVncds82tCHV8dPJGPKf8hVGwB+IdU4dyzLUXLM6lU6uqm0tHI99q
-0TNGq5Wdcm4f516OdUt/y8o9aeetbQhZU36AZWyLhZd1fU2EaNgib45qW4kg
-dx+IeUdEaHNfy637f6/hmndPiIY7du6aFPcQ0Xn3tGi6gWd1QsyP4Gu+3+o+
-Yvi0Gflr6HDS1+hwbbBVlr5t6/M7UxWKczyp1UnWOe5U3dMWvtQmb+m9BmjO
-5aivPTAspFSvEuX45aLFXNG9Wn/uOWiwPYd8RYG8bUMGv2TMblB/+Y8Jzw0t
-tF9lJG74Or3lVnzaqLKua+QXfEM5/+Qc1Gs35kZQPr6FGQG6kyh/D1T7sYPJ
-pzr2F9wS+bGjL737qbptpYeUwLtBH4jX1uHMoywtwOjkv4vAjX9FlZkueHMU
-EQR3fU08D9/ZOclSvN+KJJD2+XqplwdZeaFcX1jDvyql6DmYjswlaASTzsKp
-RthX5B6C05kepTkuKqKiyIYxJU6uY4Qw8WLStMD9wGGWY0ouk4rbSeOsTsLr
-XckJXUeAPVCnVtGLMJCgM8RZ3jOXsfI1q+RhMI3HeaEOqk4GytfAF7QCK2IA
-ZkJf1bE/QUEAiD6CDHR5iGNZlDIdXvNlrt+I19UWLBG6r7Se32LQP+yUENsm
-XbL+tc4bibz1F6cj+YETTkfiHNYPE+fF8BQGGzpt56Zu6JtwpucNa0dIhRby
-p02nmpfgeKOemHCzunmskE7a57anJZ1s2qWV23utkjEbMqZoNuJYSl6aVX8c
-bPbEYZVZdEP2zntbXKrWbxxybUdRdAdlMfX7OcP0ihXCDEonRKUB2bRS4kRu
-elIGHqXZJEpU2AxeLzXFZP8wn0/d9W3Lu9ND+1sLdZeozpZRzqa9Ok+pKetx
-Fe0p6Ht6t2u73tvmp+qMxysNu5XrgULBTz7T2GfRyYu1iGfwnPpCvnHGHAkM
-jDIyWxHjKE5QjgA1agQPyw8Me1DZmkZyGE2LWUJIM9Vf8c0VSgzh9W4qFy7e
-CcQj5+aoVbJCp6u1aaCEpnIhU4qkEmUdWT6NUrTHSWS4rBxx4r+RxGgHplqS
-ke80moLMnOYoZhE8nzugw/9RPmGmOjn83bAjG81GcvndoMRVnBIAACexyix/
-xOKZsgryWqGv9qWEmgxBX2cIROUkANUwQ6d54LTNno6q72uVPENsYdDiMV29
-o6+AUK7fONE3wtBhfitY2lxugKvtmQSzEUs2LbWFSvDEtzXKBCGQT5psPwkD
-jGqRcxuhueO1931vFwGBZvLx43H3OV1M101lCZC6+Xj4aH/n+0Fc0CW7ah0y
-ykHHueqNL5tBaWIt8CQ9UBuQeJmc1PyNCZjpgiZ4g+nrEQ7rV3yRpLrdQt+2
-saVYqzBsfOQM8hu9yG68evH26PWrX2gRoBuCD/b2d29uaBxOX5zRR3V18M7+
-DvRKzeEgAgjE4CA2djfZjIexx/sNI6Q7TlHal6EdXZinQHUlv8/469mFBGmw
-cXb2pwqp/b3v9vAe47cvzxQy+/sH+mLjv7w7PlJ3Ie/sAIp8qfXGntM6gprM
-6LqByDltUQ1TmFSHRHbKs5EDwfiuu41Xh0cnm+ZKZSCY6vplrO+6nsgoLXjD
-F+96hNnOA8g5ZXFDaQjyJhdqANTljobkgHKu8slPqwkmR3zFAKUQR6FZ3bvT
-AKeuTmn9B+dgaXqfc3bbyNodsm6wty6drt1YqINqEdAVTDvEZptuT6JfOL3o
-l9iIexKGWbnROImryZOufDsqV+wm35+pwdmoIJZJ/F5y7tYBpSYtYhJM3PXL
-WQK2M1WjGzUn5hYiWPsu4zzjKxpBugJ0adOF+ZBk6Cguu4wocxP1winM61Th
-4KZzw6I85utJkPxKcqBEds/54BpGLAr1JSze2AdJohMdcwppkjWm2Z6n2AI3
-lLlUBoCFCYGtuAyBaDqRf21bUwlFKvzdVzeCR8UwjrtQD2vQJSui3f0+9U+2
-MNhmhQNE4HaD7msJZ+6SZQZxuBCrgHYOeidbDuetRShVjA7OVrWS2AsGV5iA
-jkCxsl7IpFqiMX9hlsPyi2YnwLZDIr3ONKdH3+Z/F3WOkhyeevj5cWhO1wq3
-b3GxqHNY2wR2W8FteK2Z5YQh7aIg3QgVqtDtVE7JihQtlM9FZJguDLvUmd68
-/F63o4UZWdII8d5gGnOd+oiMBsqEAnqfQwTV+3cpXwBMsbRKyKPgTq/tGcm2
-HyBhpuyQ2ZXcogXKM1abDDuipL8GFW2C1CDTpzQxUUoNjPjyWorMVDetqXvH
-oGtKPTbSD6wTY+hvoUSLOWaBEjTyydGCsw1aGiWFJmhDWd24XHLy9QxE7ARo
-QN4ShHGWVdkSQf6PfNEdWj0Q0YFkQ3qkk1bYIr29PD8ueSGZkT7JN9DzFchC
-SSbCSg+R0jpQmzqXYA7Af5TI31IrCd6nq4+kboYEfk+omEYYkoS3GSrZTB1p
-J5492WyvYl9GPvuz+i74HOVIkhVS1KxDR45HA1xBvUSXuT9tM32xOM0DzYMP
-+LZnX+1/8ICvg/7byUuwDfk6Z+oRlab8ZeTFZXnLFz4rY6Baad+dHuvkMp20
-6Ah9L/Sa8ivob7WWOioHFSmLDw8ePbq5CY/m6XFfiFme9tFc6JMwLPofJkk/
-LfrkVNVmBCl4DB35m1LADcs+a7HHL85+JYsNcIBXr7YPf1ATUveRekLXXiCa
-6L4sppFFxAc8QU94gr7C76uTzbnbWpEI35FD0WqhIqgyQ3b2QJV3KOvdzN1h
-OWzfzh2kK4IHQtjEO4lifdf54Jq68wzK6cJEjSWG4g15mvpCmKFReY37wtzh
-rWjb7XbFACQtsuoveHH3W5ghNaSZXH0bZX3bYrvJ3ieXyLfdbn6FSP2X9oXz
-G3Whobm78OaZ/v7JVPJvcvtU//iN+Afb7P90C5l2lEVvP1awVUMl76IwquTc
-C9ZQzw22dup5lzSZftj3/DyzseT4ulr5+rU8z+aWb1YLQ1TlT0BUN2dcE3G9
-bISGwI19titXV5rM77ddh+79cIrTo+78aKhU5T52alqXIjS15vsiny3RPSsL
-tN2snyHaG7BMa3z10dGfYHTmJfkNj1VWy9PbtieZmz3X7oYVcd9QNTAhWjZq
-hfyLJRvl5dx9Fs35zE+wWitlRgE/12ZIqLj5Lz5OIsn6GDn4Lwd5TqrPuc04
-GDWUrJ4W6TEXErbKFakeOztkQ+1gBOEibBt3f5tQnBumd4+thSLh7rq5QCCX
-B8yJ36oJpKbUclZBa7TciMFPIVDVHmD7DrlQONxhebLYUOrBD6tAMTEBq+Ci
-prt0xrxOLzdk6Rb95Bih5TGkzZwG8PW8T6uQ0c6TtPqQ+lmIVoOyINVPrZYv
-KVdghDodGrPnfO7m3Vw099z6wtQun6v9OelVvgAKXn6Te8WgnmFktX7Myb5x
-r/gHsl8EQarEFyFx17hgNi+WrPKbVANWVoHKrjXFas5pq8QnXch8BVXT/P6n
-W9JApAPxwcc/SdoAoHYovgJQV5y9ug1y8lmjph+s71hYuu0l6qNZ4BuGTfaC
-cMfbMVKWRsA2VVZC4CpwLFgDWnr4XJ+Ab003VnOORT5bUM07Dmp1ulU1v61F
-SDacSnw2r1rmnrlzB2UBR9fU1LB6LizRE3oWCq5go3POjt1fw3MsrLturJ2l
-dY+tzrO4mhts36zrMmm2muzScyy05iXHBhA+qHU7M8KDUTMjWgKo2zg13F2b
-sCVc4bHvksNkQ6hbgstCqFuBzRD0JtFz3K3iQJ4XHyJU+uqhYVNYdXBbEaOW
-KOKP76BPkhnuunCoBtfFHc+L7EoFaplIHdyxqmKLdFnaNVGwOZ6GNnZxI+bj
-x98eHvVOXxx1P0yS7t7OzqPd3b0DDsVCMH8+e/2K90a+f/wdhmjxnhm38fEj
-tNpVrSAA+F5c4O0+eApdNe4F+vFFv9ZFl5xJCZBS20e6BaaMD0Vv2usAIzeO
-EUFs2EEbm1vWhfPmPvqN3b0dMYHpV8pi0wmAJbc8Qdnd2TRx7+pmUrWN3RPH
-FBUdqzBxtWnoxjeruyrVHcq7j/d6O3jT9fbDPYJKONJ9mzs7u/3R4FG/v7u9
-u/dIfzxQWHF8Ui1vprDCDXgjbPfxo953u73dnZ3evtsEAjCtRIPhqL+71+9X
-hQ56ta2gJ89gLDEgEo/k/djZ7e10BN1RGKfnP3bevf2l+6jz7OnaExVUBYXT
-4sdOw84VqERYro/zoo+gngJGT3SM5fy61a6XKk+VoXrDFtRTNV+fgELeGjSG
-SD41E/0JDfZTa+I/MftSTx1xoN8/9YTEE+bFp3iR8ZNt9Ydfxt1xemozyJNt
-76Nf19Ffnzoj/2Tb/egivB1+vbgfB2374bHzkl0JsenyPXqyHRywJ/bO29Pd
-nSfbzgu7ZH3P7SlIjCfbgfcV32w7jANITNTXJ9tzuBWqMWfDdNrm+fTUnAR6
-4IlXEGBlIn/s1JcSlOkgO/Hcj/Dl8r+KLDWC2US5txPPLMO0hObVwKwAntTA
-c1kde7LqPeNOX53Z6jQQwhQQVdRyH6dl3zrs1SGEnFfw0gy196H6BB/+4bFd
-PeNGh9kbynZw2nbqN/V2XE7GkvakDdVwGJcrWFO141W48SEswvKgHZbelGyF
-aGgi1vB1/rY9FU5POvYsA9i7O87X+pTCMns7pow5SLem/3tjnZV74DP6/CmC
-/Atz5P8BvgRNwW77AAA=
+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
+v8SagGk0KyhjaNHEPGnLd7ZUb7xbau6sT4fJ+2wKxoedQSGu0u40q5wkpV7T
+BR861yfiMGkqKNSUoej69BJ0zwJOYjlER+7xJcJpvsAgx0kQ7lJ278LnG1lG
+cOkRTY5hmIqcRsgJaSxRGS7dVHD2CWUtHXe+wTC3XbZ0Z2Qi/aZBKhx9jDQ3
+ujQddYpMXz7cjBSjQ7UmDE7TGvp9aMztZn1/G1glJ7WJUxBCPTs4fKWeUP7C
+JNoD9ZapQznmujMW7zqqm6qbS0cj30roGaPVyU65sI8Lr826pb/lxj3p5q1t
+CVkTP8AytsW113h9TYRo2SJvj2q7EUHuPhDzjojQ5b6WW/f/k4Zr3j0hWu7a
+uWtSfIKIzrunRdsNPDcnxOIIvvZLrz5FDJ82I3+NHU76Gh2uLbbK0rdvfX5n
+qqC4wJNqT7IucKfqnnbwpbZ5Sz9pgObCGfW1B4bFlOqbRDl+uWgxn3XfrD+f
+OGiw+wz5igJ5u4YMfsmY3aj+8m8TnhsTtF9lJG78Or3lJD5tVDnXN/ILvruc
+f3IO6pUrc1coH9/CjAD9aVK+A6r92MPkUz33C26J/NjTl979ZG9bGSAl8NbQ
+b9RL53DmQZFXYHTy31Xkxr/KZqaL3hxFBMFdXxPPwxd5Tosc77ciDqR9vkHq
+5eOiPhPXF9YIr0qpBoKpQKHTbwKWvUP+sTed2zE1B0RVUlXFKKNUyU0cECbe
+T5pXuAM4KkpMwmWSb3uJm+Xsu96HnNIFBIiznFNFv8FxClpCVpQDczErX7lK
+PgXTeFZWcjR1eizeBb6sFSYfhlxO6Ksc9FO07Y/oI8hIl0c4elWd5qNLvtj1
+T+ql3XQl0g5Fz/ktA43DTQKxaRIk61+rvHXIm31ZPk7fc4rpRJ2CxDCRXQxP
+MFjTiTrXdUN/iud2XnP2gCSYkD+te9WClMZrzVSE6/ausSr1Ej13PR/p5c+u
+nWzeK5arrKUZxa/RHKV0pYX9Y299oPZtLtG1dHA62OBSjX7jkGvLieI5KG9p
+2M85JlS0CDMonQKVBmTdSYKT+AlJGXiSF9NkIoEyeKHUDNP7wwp+7Uu0jeAW
+D+1hreT2UJ0fo57PBs05JYs0mFW0i6Cv691s7HNvmp/SmWCutOxPrkYKRT+F
+k8Y9fU5+q+vmDJ5Mv3beeGOOBIaJMjabDydJNkE+AtRoEDzOPzDQQfIzjdNR
+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
 
 -->
 
