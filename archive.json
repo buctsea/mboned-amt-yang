@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-15T03:20:49.401632+00:00",
+  "timestamp": "2026-03-26T03:16:28.146599+00:00",
   "repo": "changwang-ietf/mboned-amt-yang",
   "labels": [
     {
@@ -234,24 +234,26 @@
       "id": "PR_kwDORjzg187KWP0e",
       "title": "some edits",
       "url": "https://github.com/changwang-ietf/mboned-amt-yang/pull/7",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "* fix the file name\r\n* offload yang/trees so that you automatically inherit any chnages made to these files\r\n* Some minor edits here and there",
       "createdAt": "2026-03-13T12:17:44Z",
-      "updatedAt": "2026-03-13T12:24:29Z",
+      "updatedAt": "2026-03-24T10:02:30Z",
       "baseRepository": "changwang-ietf/mboned-amt-yang",
       "baseRefName": "main",
       "baseRefOid": "c02546b1e5f6827304435cf9202df22c46cda276",
       "headRepository": "changwang-ietf/mboned-amt-yang",
       "headRefName": "boucadair-patch-4",
       "headRefOid": "fd31254c9db24c05bee87da1a87546810a0953b4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-03-24T10:02:30Z",
+      "mergedAt": "2026-03-24T10:02:30Z",
+      "mergedBy": "changwang-ietf",
+      "mergeCommit": {
+        "oid": "2e1fea3203c3a86bdd2e5fb5680f7adfedd07b85"
+      },
       "comments": [],
       "reviews": []
     }
